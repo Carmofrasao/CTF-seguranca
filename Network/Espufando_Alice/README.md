@@ -81,7 +81,7 @@ Para isso, vamos usar o script `ARPspoof.py`, ele basicamente fica enviando para
 
 3) Agora eu tenho que manipular esse pedido, para isso vamos utilizar o `IPspoof.py`, ele trata as requisições HTTP (o nome não é muito intuitivo), ele recebe e responde as requisições como se fosse `ftp.br.debian.org`.
 
-4) Agora que temos as requisições, precisamos mandar a noissa calculadora, para isso precisamos de um .deb com nosso codigo malicioso.
+4) Agora que temos as requisições, precisamos mandar a noissa calculadora, para isso precisamos de um `.deb` com nosso codigo malicioso.
 
 Para isso precisamos saber o formato de um `.deb`, mas isso voce pode pesquisar por conta, eu ja deixei um disponivel aqui. Em `pacote/usr/bin/gnome-calculator` esta o codigo python;
 
@@ -97,6 +97,6 @@ Coloque no lugar certo:
 
 `mv gnome-calculator_43.0.1-2_amd64.deb debian/pool/main/g/gnome-calculator/`
 
-5) Agora que temos o .deb, precisamos servir esse arquivo, para isso vamos usar o `serverHTTP.py`, ele basicamente envia o `.deb`.
+5) Agora que temos o `.deb`, precisamos servir esse arquivo, para isso vamos usar o `serverHTTP.py`, ele basicamente envia o `.deb`.
 
 6) Para fazer tudo funcionar, rode o `serverHTTP.py`, depois rode o `ARPspoof.py`, depois o `IPspoof.py`, e por ultimo, rode `nc alice_pc 8349` (em terminais diferentes).
