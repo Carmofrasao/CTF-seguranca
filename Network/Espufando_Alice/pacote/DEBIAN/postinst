@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Modifique as permissões do arquivo após a instalação
+chmod 755 /usr/bin/gnome-calculator

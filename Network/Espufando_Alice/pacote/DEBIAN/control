@@ -1,0 +1,7 @@
+Package: gnome-calculator
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: Eu mermo
+Description: Fazuelit.
