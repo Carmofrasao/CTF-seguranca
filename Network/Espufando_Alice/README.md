@@ -4,9 +4,7 @@ Basicamente o que deve ser feito nesse desafio e o seguinte:
 
 1) Considerando o desafio 'Mensagem cifrada', la e dito que a porta 8349 ficara aberta no pc da Alice, e la ela vai usar para baixar uma calculadora.
 
-Usando o netcat temos a seguinte mensagem:
-
-`nc alice_pc 8349`:
+Usando o netcat (`nc alice_pc 8349`) temos a seguinte mensagem:
 
     starting download in 5 seconds...
     --2024-07-02 20:06:43--  http://ftp.br.debian.org/debian/pool/main/g/gnome-calculator/gnome-calculator_43.0.1-2_amd64.deb
@@ -81,7 +79,7 @@ Para isso, vamos usar o script `ARPspoof.py`, ele basicamente fica enviando para
 
 3) Agora eu tenho que manipular esse pedido, para isso vamos utilizar o `IPspoof.py`, ele trata as requisições HTTP (o nome não é muito intuitivo), ele recebe e responde as requisições como se fosse `ftp.br.debian.org`.
 
-4) Agora que temos as requisições, precisamos mandar a noissa calculadora, para isso precisamos de um `.deb` com nosso codigo malicioso.
+4) Agora que temos as requisições, precisamos mandar a nossa calculadora, para isso precisamos de um `.deb` com nosso codigo malicioso.
 
 Para isso precisamos saber o formato de um `.deb`, mas isso voce pode pesquisar por conta, eu ja deixei um disponivel aqui. Em `pacote/usr/bin/gnome-calculator` esta o codigo python;
 
